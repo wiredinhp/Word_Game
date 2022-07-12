@@ -1,0 +1,130 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           words
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/wiredinhp/words#readme>
+homepage:       https://github.com/wiredinhp/words#readme
+bug-reports:    https://github.com/wiredinhp/words/issues
+author:         Het Patel
+maintainer:     heth1705@gmail.com
+copyright:      BSD
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/wiredinhp/words
+
+library
+  exposed-modules:
+      Data
+      Lib
+  other-modules:
+      Paths_words
+  hs-source-dirs:
+      src
+  build-depends:
+      Cabal >=3.0.0.0 && <3.7
+    , Glob >=0.9.0
+    , aeson >=1.4.3.0
+    , base >=4.7 && <5
+    , bifunctors
+    , bytestring
+    , containers
+    , cryptonite
+    , deepseq
+    , directory >=1.2.5.0
+    , filepath
+    , hspec
+    , http-client
+    , http-client-tls
+    , http-types
+    , infer-license >=0.2.0 && <0.3
+    , pretty
+    , random
+    , scientific
+    , text
+    , transformers
+    , unordered-containers
+    , vector
+    , yaml >=0.10.0
+  default-language: Haskell2010
+
+executable words
+  main-is: Main.hs
+  other-modules:
+      Paths_words
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -dynamic
+  build-depends:
+      Cabal >=3.0.0.0 && <3.7
+    , Glob >=0.9.0
+    , aeson >=1.4.3.0
+    , base >=4.7 && <5
+    , bifunctors
+    , bytestring
+    , containers
+    , cryptonite
+    , deepseq
+    , directory >=1.2.5.0
+    , filepath
+    , hspec
+    , http-client
+    , http-client-tls
+    , http-types
+    , infer-license >=0.2.0 && <0.3
+    , pretty
+    , random
+    , scientific
+    , text
+    , transformers
+    , unordered-containers
+    , vector
+    , words
+    , yaml >=0.10.0
+  default-language: Haskell2010
+
+test-suite words-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_words
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Cabal >=3.0.0.0 && <3.7
+    , Glob >=0.9.0
+    , aeson >=1.4.3.0
+    , base >=4.7 && <5
+    , bifunctors
+    , bytestring
+    , containers
+    , cryptonite
+    , deepseq
+    , directory >=1.2.5.0
+    , filepath
+    , hspec
+    , http-client
+    , http-client-tls
+    , http-types
+    , infer-license >=0.2.0 && <0.3
+    , pretty
+    , random
+    , scientific
+    , text
+    , transformers
+    , unordered-containers
+    , vector
+    , words
+    , yaml >=0.10.0
+  default-language: Haskell2010

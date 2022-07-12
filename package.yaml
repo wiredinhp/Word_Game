@@ -1,0 +1,71 @@
+name:                words
+version:             0.1.0.0
+github:              "wiredinhp/words"
+license:             BSD3
+author:              "Het Patel"
+maintainer:          "heth1705@gmail.com"
+copyright:           "BSD"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/wiredinhp/words#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - random
+  - hspec
+  - bytestring
+  - deepseq
+  - directory >= 1.2.5.0
+  - filepath
+  - Glob >= 0.9.0
+  - text
+  - containers
+  - unordered-containers
+  - yaml >= 0.10.0
+  - aeson >= 1.4.3.0
+  - scientific
+  - Cabal >= 3.0.0.0 && < 3.7
+  - pretty
+  - bifunctors
+  - cryptonite
+  - transformers
+  - http-types
+  - http-client
+  - http-client-tls
+  - vector
+  - infer-license >= 0.2.0 && < 0.3
+library:
+  source-dirs: src
+
+executables:
+  words:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -dynamic
+    dependencies:
+    - words
+
+tests:
+  words-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - words
